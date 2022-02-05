@@ -1,8 +1,6 @@
-ARG BASE_IMAGE=ubuntu:20.04
-FROM $BASE_IMAGE
+FROM ubuntu:20.04
 
-ARG QEMU_ARCH
-#ADD x86_64_qemu-${QEMU_ARCH}-static.tar.gz /usr/bin
+LABEL MAINTAINER="MyDevLab <ts.mydevlab@gmail.com>"
 
 COPY . /bd_build
 
