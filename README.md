@@ -1,14 +1,19 @@
-# An Ubuntu docker base image
+# An Ubuntu docker base image with mono complete
 
-Coming in at approx 231MB I am not so sure this can be called minimal, but it is smaller and more suited than many similar images.
+Coming in at approx 752MB I am not so sure this can be called minimal, but it is smaller and more suited than many similar images.
 
 I would prefer to use a much smaller Alpine based image but have not yet done enough testing with mono based builds and applications to use it in production. So for now I continue to use an Ubuntu based image
+
+# Purpose
+
+This image is the image from which we do compile/builds for OpenSimulator.  It is also the image we start from for our OpenSimulator application image creation.
 
 # Reorganization
 
 This project was created as a fork of the original [Phusion baseimage-docker](https://github.com/phusion/baseimage-docker) project. I wanted to retain any history as well as ensure to give them credit for their great work.
 
 Once forked I did some rearranging and cleanup to suit my own needs. I also moved their original license file into the baseimage folder since my changes to that folder don't substantially change their work. The added README file in that folder better summarizes my modifications, and the git history tracks any actual changes.
+
 
 # Build
 
