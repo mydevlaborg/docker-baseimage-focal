@@ -8,14 +8,44 @@ I would prefer to use a much smaller Alpine based image but have not yet done en
 
 This image is the image from which we do compile/builds for OpenSimulator.  It is also the image we start from for our OpenSimulator application image creation.
 
-# Reorganization
+# TL;DR
+
+For those that simply want to build the image and not read everying all you need to do is the following
+
+```bash
+git clone https://github.com/mydevlaborg/docker-baseimage-focal.git
+cd docker-baseimage-focal
+make image
+```
+You should then have a new image on your computer which can be used freely named ***mydevlab/docker-baseimage-focal:0.0.1***
+
+
+# Project Reorganization
 
 This project was created as a fork of the original [Phusion baseimage-docker](https://github.com/phusion/baseimage-docker) project. I wanted to retain any history as well as ensure to give them credit for their great work.
 
-Once forked I did some rearranging and cleanup to suit my own needs. I also moved their original license file into the baseimage folder since my changes to that folder don't substantially change their work. The added README file in that folder better summarizes my modifications, and the git history tracks any actual changes.
+Once forked I did some rearranging and cleanup to suit my own needs. I also moved their original license file into the baseimage folder since my modifications to that folder don't substantially change their work. The added README file in that folder better summarizes my modifications, and the git history tracks any actual modifications.
+
+# Note on Mermaid Diagrams
+
+I use mermaid for simple diagrams for many reasons, least of which is their content is a lot easier to manage and version control along with the rest of the project.  Sure I could use an external program and render them to images and include those but why?  Github is the only thing I use that lacks support for mermaid diagrams.
+
+It is not my fault that after all these years GitHub still does not have native render support for them.  I have noted however that adding mermaid support is on their roadmap.  We can only hope they add it soon.  Until then my embedded diagrams are not going to render on Github.
+
+# Overview
+
+This is the first part of a series of related docker projects.
+
+```mermaid
+graph LR
+    base[docker-baseimage-focal] --> build
+    build[<a href='https://github.com/mydevlaborg/docker-build-opensimulator'>docker-build-opensimulator</a>] --> opensimulator[<a href='https://github.com/mydevlaborg/docker-opensimulator'>docker-opensimulator</a>]
+```
+
+This base image is used in multiple projects I have so is therefore treated as its own separate project rather than being part of a multi-stage Dockerfile.
 
 
-# Build
+# Building the Docker Image
 
 I use a Makefile to help handle the build, as an easier way to ensure everything is done in a consistent manner.
 
