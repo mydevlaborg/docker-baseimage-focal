@@ -26,12 +26,6 @@ This project was created as a fork of the original [Phusion baseimage-docker](ht
 
 Once forked I did some rearranging and cleanup to suit my own needs. I also moved their original license file into the baseimage folder since my modifications to that folder don't substantially change their work. The added README file in that folder better summarizes my modifications, and the git history tracks any actual modifications.
 
-# Note on Mermaid Diagrams
-
-I use mermaid for simple diagrams for many reasons, least of which is their content is a lot easier to manage and version control along with the rest of the project.  Sure I could use an external program and render them to images and include those but why?  Github is the only thing I use that lacks support for mermaid diagrams.
-
-It is not my fault that after all these years GitHub still does not have native render support for them.  I have noted however that adding mermaid support is on their roadmap.  We can only hope they add it soon.  Until then my embedded diagrams are not going to render on Github.
-
 # Overview
 
 This is the first part of a series of related docker projects.
