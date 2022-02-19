@@ -55,6 +55,8 @@ To build the image simply execute the following
 make image
 ```
 
+Please note the make image command will always build a new image.  This is so we can ensure we capture the most recent package updates so we have the most recent fixes and security updates.  You will need to manually cleanup old images on your computer.
+
 To run a scan for known vulnerabilities on the created image execute the following
 
 ```bash
