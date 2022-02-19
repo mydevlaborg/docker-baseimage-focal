@@ -12,3 +12,4 @@ To better suit my needs I make a few changes from the Phusion project.
 - ssh is disabled by default
 - cron is disabled by default
 - install mono complete packages, version 6.12 from mono project
+- rename setuser to userdo so it better reflects its purpose

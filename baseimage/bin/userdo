@@ -28,7 +28,7 @@ import pwd
 
 
 def abort(message):
-    sys.stderr.write("setuser: %s\n" % message)
+    sys.stderr.write("userdo: %s\n" % message)
     sys.exit(1)
 
 
@@ -58,7 +58,7 @@ def main():
 if __name__ == '__main__':
 
     if len(sys.argv) < 3:
-        sys.stderr.write("Usage: /sbin/setuser USERNAME COMMAND [args..]\n")
+        sys.stderr.write("Usage: /sbin/userdo USERNAME COMMAND [args..]\n")
         sys.exit(1)
 
     main()
